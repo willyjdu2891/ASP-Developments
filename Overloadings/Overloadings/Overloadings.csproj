@@ -8,12 +8,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{534EE84C-B9C1-4A02-98E8-3A4D3F5A6B95}</ProjectGuid>
+    <ProjectGuid>{8DFD9104-74E8-4A0C-9A35-D20633F24E74}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MyShop.WebUI</RootNamespace>
-    <AssemblyName>MyShop.WebUI</AssemblyName>
+    <RootNamespace>Overloadings</RootNamespace>
+    <AssemblyName>Overloadings</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -49,6 +49,9 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Caching">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Runtime.Caching.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -197,7 +200,6 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\ProductCategoryManagerController.cs" />
     <Compile Include="Controllers\ProductManagerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -268,13 +270,9 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\ProductManager\Index.cshtml" />
-    <Content Include="Views\ProductManager\Create.cshtml" />
+    <Content Include="Views\ProductManager\Insert.cshtml" />
     <Content Include="Views\ProductManager\Edit.cshtml" />
     <Content Include="Views\ProductManager\Delete.cshtml" />
-    <Content Include="Views\ProductCategoryManager\Index.cshtml" />
-    <Content Include="Views\ProductCategoryManager\Edit.cshtml" />
-    <Content Include="Views\ProductCategoryManager\Delete.cshtml" />
-    <Content Include="Views\ProductCategoryManager\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -293,21 +291,13 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MyShop.Core\MyShop.Core.csproj">
-      <Project>{51e44480-1d6a-4cbb-8ef3-e7214a5acee7}</Project>
-      <Name>MyShop.Core</Name>
+    <ProjectReference Include="..\Overloadings.Core2\Overloadings.Core.csproj">
+      <Project>{c134f7f3-e9d2-4bc0-b645-9df2aea09dc3}</Project>
+      <Name>Overloadings.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MyShop.DataAccess.inMemory\MyShop.DataAccess.inMemory.csproj">
-      <Project>{496f1e2d-9031-4c37-8d25-a6dfefdb7c23}</Project>
-      <Name>MyShop.DataAccess.inMemory</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MyShop.DataAccess.SQL\MyShop.DataAccess.SQL.csproj">
-      <Project>{b930e481-d767-4b91-9acb-682f83bf962f}</Project>
-      <Name>MyShop.DataAccess.SQL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MyShop.Services\MyShop.Services.csproj">
-      <Project>{3de0f78d-0fe6-4f0e-b6e8-0608d05d6e92}</Project>
-      <Name>MyShop.Services</Name>
+    <ProjectReference Include="..\Overloadings.Data.InMemory2\Overloadings.Data.InMemory.csproj">
+      <Project>{170b0d6f-4440-4260-a8e7-3cd70fce984b}</Project>
+      <Name>Overloadings.Data.InMemory</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
@@ -326,9 +316,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>36904</DevelopmentServerPort>
+          <DevelopmentServerPort>13063</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:36904/</IISUrl>
+          <IISUrl>http://localhost:13063/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
